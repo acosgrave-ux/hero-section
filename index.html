@@ -349,6 +349,103 @@
             }
         }
 
+        .about-section {
+            background: #0d0d0d;
+            padding: 100px 48px;
+            color: #fff;
+        }
+
+        .about-inner {
+            max-width: 900px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .about-text .section-label {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: #e73c7e;
+            margin-bottom: 16px;
+            display: block;
+        }
+
+        .about-text h2 {
+            font-size: 2.4rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+
+        .about-text p {
+            color: #888;
+            font-size: 1rem;
+            line-height: 1.8;
+            margin-bottom: 16px;
+        }
+
+        .about-stats {
+            display: flex;
+            gap: 36px;
+            margin-top: 36px;
+        }
+
+        .stat h3 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #e73c7e;
+        }
+
+        .stat p {
+            font-size: 0.85rem;
+            color: #666;
+            margin: 0;
+        }
+
+        .about-visual {
+            background: linear-gradient(135deg, #1a1a1a, #222);
+            border-radius: 16px;
+            height: 420px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #2a2a2a;
+            gap: 12px;
+        }
+
+        .about-visual .barber-icon {
+            font-size: 5rem;
+        }
+
+        .about-visual p {
+            color: #444;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        @media (max-width: 768px) {
+            .about-section {
+                padding: 80px 24px;
+            }
+
+            .about-inner {
+                grid-template-columns: 1fr;
+            }
+
+            .about-visual {
+                height: 240px;
+            }
+
+            .about-text h2 {
+                font-size: 1.8rem;
+            }
+        }
+
         .booking-section {
             min-height: 100vh;
             background: #111;
@@ -553,7 +650,7 @@
         <ul class="nav-links" id="navLinks">
             <li><a href="#">Home</a></li>
             <li><a href="#get-started">Services</a></li>
-            <li><a href="#get-started">About</a></li>
+            <li><a href="#about">About</a></li>
             <li><a href="#get-started" class="nav-book">Book Now</a></li>
         </ul>
     </nav>
@@ -564,6 +661,35 @@
             <h1>Fades & Blades</h1>
             <p>Premium cuts, clean lines. Book your appointment today.</p>
             <button class="cta-button">Book Now</button>
+        </div>
+    </section>
+
+    <section class="about-section" id="about">
+        <div class="about-inner">
+            <div class="about-text">
+                <span class="section-label">Our Story</span>
+                <h2>More Than a Cut — It's a Craft</h2>
+                <p>At Fades & Blades, we believe every visit should feel like an experience. From the moment you sit in the chair, you're in the hands of skilled barbers who take pride in every line, every fade, and every finish.</p>
+                <p>We've been serving the community since 2018, building a reputation for precision cuts, a welcoming atmosphere, and a no-rush approach to grooming. Whether it's your first time or your fiftieth, you'll leave looking sharp.</p>
+                <div class="about-stats">
+                    <div class="stat">
+                        <h3>7+</h3>
+                        <p>Years open</p>
+                    </div>
+                    <div class="stat">
+                        <h3>4k+</h3>
+                        <p>Happy clients</p>
+                    </div>
+                    <div class="stat">
+                        <h3>3</h3>
+                        <p>Expert barbers</p>
+                    </div>
+                </div>
+            </div>
+            <div class="about-visual">
+                <div class="barber-icon">✂️</div>
+                <p>Est. 2018</p>
+            </div>
         </div>
     </section>
 
