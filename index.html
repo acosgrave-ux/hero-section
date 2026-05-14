@@ -68,14 +68,28 @@
 
         .nav-scissors { flex-shrink: 0; }
 
-        .hero-logo {
-            margin-bottom: 28px;
-            animation: fadeInUp 0.8s ease both;
+        .hero-badge-bg {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 480px;
+            height: 480px;
+            opacity: 0.18;
+            z-index: 1;
+            pointer-events: none;
         }
 
-        .hero-logo svg {
-            width: 110px;
-            height: 110px;
+        .hero-badge-bg svg {
+            width: 100%;
+            height: 100%;
+        }
+
+        @media (max-width: 768px) {
+            .hero-badge-bg {
+                width: 320px;
+                height: 320px;
+            }
         }
 
         .nav-logo span {
@@ -734,23 +748,23 @@
     </nav>
 
     <section class="hero">
+        <div class="hero-badge-bg" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160">
+                <circle cx="80" cy="80" r="75.5" fill="none" stroke="#C9A84C" stroke-width="0.8"/>
+                <circle cx="80" cy="80" r="69.5" fill="none" stroke="#C9A84C" stroke-width="0.3" opacity="0.6"/>
+                <line x1="80" y1="74" x2="48"  y2="20"  stroke="#C9A84C" stroke-width="2.5" stroke-linecap="round"/>
+                <line x1="80" y1="74" x2="112" y2="20"  stroke="#C9A84C" stroke-width="2.5" stroke-linecap="round"/>
+                <line x1="80" y1="74" x2="50"  y2="112" stroke="#C9A84C" stroke-width="2.5" stroke-linecap="round"/>
+                <line x1="80" y1="74" x2="110" y2="112" stroke="#C9A84C" stroke-width="2.5" stroke-linecap="round"/>
+                <circle cx="80" cy="74" r="4"   fill="#C9A84C"/>
+                <circle cx="80" cy="74" r="1.8" fill="#0a0a0a"/>
+                <circle cx="41"  cy="120" r="12" fill="none" stroke="#C9A84C" stroke-width="1.8"/>
+                <circle cx="119" cy="120" r="12" fill="none" stroke="#C9A84C" stroke-width="1.8"/>
+                <line x1="38" y1="142" x2="122" y2="142" stroke="#C9A84C" stroke-width="0.5" opacity="0.45"/>
+                <text x="80" y="153" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="9" fill="#C9A84C" letter-spacing="2.5">FADES &amp; BLADES</text>
+            </svg>
+        </div>
         <div class="hero-content">
-            <div class="hero-logo">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" aria-label="Fades &amp; Blades logo" role="img">
-                    <circle cx="80" cy="80" r="75.5" fill="none" stroke="#C9A84C" stroke-width="0.8"/>
-                    <circle cx="80" cy="80" r="69.5" fill="none" stroke="#C9A84C" stroke-width="0.3" opacity="0.6"/>
-                    <line x1="80" y1="74" x2="48"  y2="20"  stroke="#C9A84C" stroke-width="2.5" stroke-linecap="round"/>
-                    <line x1="80" y1="74" x2="112" y2="20"  stroke="#C9A84C" stroke-width="2.5" stroke-linecap="round"/>
-                    <line x1="80" y1="74" x2="50"  y2="112" stroke="#C9A84C" stroke-width="2.5" stroke-linecap="round"/>
-                    <line x1="80" y1="74" x2="110" y2="112" stroke="#C9A84C" stroke-width="2.5" stroke-linecap="round"/>
-                    <circle cx="80" cy="74" r="4"   fill="#C9A84C"/>
-                    <circle cx="80" cy="74" r="1.8" fill="#0a0a0a"/>
-                    <circle cx="41"  cy="120" r="12" fill="none" stroke="#C9A84C" stroke-width="1.8"/>
-                    <circle cx="119" cy="120" r="12" fill="none" stroke="#C9A84C" stroke-width="1.8"/>
-                    <line x1="38" y1="142" x2="122" y2="142" stroke="#C9A84C" stroke-width="0.5" opacity="0.45"/>
-                    <text x="80" y="153" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="9" fill="#C9A84C" letter-spacing="2.5">FADES &amp; BLADES</text>
-                </svg>
-            </div>
             <p class="hero-eyebrow">Ranelagh, Dublin · Est. 2018</p>
             <h1>Fades &amp;<br>Blades</h1>
             <p>Premium cuts, clean lines.<br>Book your appointment today.</p>
