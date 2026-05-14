@@ -68,6 +68,11 @@
 
         .nav-scissors { flex-shrink: 0; }
 
+        @keyframes slowSpin {
+            from { transform: translate(-50%, -50%) rotate(0deg); }
+            to   { transform: translate(-50%, -50%) rotate(360deg); }
+        }
+
         .hero-badge-bg {
             position: absolute;
             top: 50%;
@@ -78,6 +83,7 @@
             opacity: 0.22;
             z-index: 1;
             pointer-events: none;
+            animation: slowSpin 40s linear infinite;
         }
 
         .hero-badge-bg svg {
