@@ -128,6 +128,39 @@
                 font-size: 1rem;
             }
         }
+
+        .content-section {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #f9fafb;
+            padding: 80px 20px;
+        }
+
+        .content-inner {
+            max-width: 800px;
+            text-align: center;
+        }
+
+        .content-inner h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #1a1a2e;
+            margin-bottom: 1rem;
+        }
+
+        .content-inner p {
+            font-size: 1.2rem;
+            color: #555;
+            line-height: 1.8;
+        }
+
+        @media (max-width: 768px) {
+            .content-inner h2 {
+                font-size: 1.8rem;
+            }
+        }
     </style>
 </head>
 <body>
@@ -136,14 +169,20 @@
         <div class="hero-content">
             <h1>Welcome to Your Site</h1>
             <p>Experience the beauty of animated gradients and smooth interactions</p>
-            <button class="cta-button">Get Started</button>
+            <button class="cta-button">Book Now</button>
+        </div>
+    </section>
+
+    <section class="content-section" id="get-started">
+        <div class="content-inner">
+            <h2>Let's Get Started</h2>
+            <p>This is where your next section begins. Add your content, features, or call-to-action here to guide your visitors forward.</p>
         </div>
     </section>
 
     <script>
         document.querySelector('.cta-button').addEventListener('click', function() {
-            console.log('Button clicked!');
-            // Add your action here
+            document.getElementById('get-started').scrollIntoView({ behavior: 'smooth' });
         });
     </script>
 </body>
