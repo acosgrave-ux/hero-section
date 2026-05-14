@@ -181,7 +181,9 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            background: var(--dark);
+            background:
+                linear-gradient(rgba(0,0,0,0.62), rgba(0,0,0,0.72)),
+                url('https://images.unsplash.com/photo-1634302104565-cc698ee83144?auto=format&fit=crop&w=1920&q=85') center/cover no-repeat;
             overflow: hidden;
         }
 
@@ -189,7 +191,7 @@
             content: '';
             position: absolute;
             inset: 0;
-            background: radial-gradient(ellipse 80% 60% at 50% 40%, rgba(201,168,76,0.08) 0%, transparent 70%);
+            background: radial-gradient(ellipse 70% 50% at 50% 40%, rgba(201,168,76,0.07) 0%, transparent 70%);
             z-index: 1;
         }
 
