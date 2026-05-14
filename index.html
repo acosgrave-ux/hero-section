@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hero Section</title>
+    <title>Fades & Blades</title>
     <style>
         * {
             margin: 0;
@@ -14,6 +14,133 @@
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             overflow-x: hidden;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px 48px;
+            background: rgba(0, 0, 0, 0.25);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            transition: background 0.3s;
+        }
+
+        nav.scrolled {
+            background: rgba(0, 0, 0, 0.85);
+        }
+
+        .nav-logo {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #fff;
+            letter-spacing: 1px;
+            text-decoration: none;
+        }
+
+        .nav-logo span {
+            color: #e73c7e;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 36px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: rgba(255,255,255,0.85);
+            text-decoration: none;
+            font-size: 0.95rem;
+            letter-spacing: 0.5px;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: #e73c7e;
+        }
+
+        .nav-book {
+            padding: 10px 24px;
+            background: #e73c7e;
+            color: #fff !important;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: opacity 0.2s !important;
+        }
+
+        .nav-book:hover {
+            opacity: 0.85;
+            color: #fff !important;
+        }
+
+        .nav-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            background: none;
+            border: none;
+            padding: 4px;
+        }
+
+        .nav-toggle span {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: #fff;
+            border-radius: 2px;
+            transition: all 0.3s;
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                padding: 16px 24px;
+            }
+
+            .nav-toggle {
+                display: flex;
+            }
+
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                flex-direction: column;
+                gap: 0;
+                background: rgba(0,0,0,0.95);
+                padding: 16px 0;
+            }
+
+            .nav-links.open {
+                display: flex;
+            }
+
+            .nav-links li {
+                width: 100%;
+                text-align: center;
+            }
+
+            .nav-links a {
+                display: block;
+                padding: 14px 24px;
+            }
+
+            .nav-book {
+                margin: 8px 24px;
+                border-radius: 8px;
+                display: block;
+                text-align: center;
+            }
         }
 
         .hero {
@@ -325,6 +452,19 @@
     </style>
 </head>
 <body>
+    <nav id="navbar">
+        <a href="#" class="nav-logo">Fades <span>&</span> Blades</a>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+            <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#">Home</a></li>
+            <li><a href="#get-started">Services</a></li>
+            <li><a href="#get-started">About</a></li>
+            <li><a href="#get-started" class="nav-book">Book Now</a></li>
+        </ul>
+    </nav>
+
     <section class="hero">
         <div class="gradient-bg"></div>
         <div class="hero-content">
@@ -421,6 +561,14 @@
     <script>
         document.querySelector('.cta-button').addEventListener('click', function() {
             document.getElementById('get-started').scrollIntoView({ behavior: 'smooth' });
+        });
+
+        window.addEventListener('scroll', function() {
+            document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 50);
+        });
+
+        document.getElementById('navToggle').addEventListener('click', function() {
+            document.getElementById('navLinks').classList.toggle('open');
         });
 
         document.querySelectorAll('.service-card').forEach(function(card) {
