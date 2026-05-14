@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="160" height="160" role="img" aria-label="Fades &amp; Blades">
+  <!-- Double circle border -->
+  <circle cx="80" cy="80" r="75.5" fill="none" stroke="#C9A84C" stroke-width="0.8"/>
+  <circle cx="80" cy="80" r="69.5" fill="none" stroke="#C9A84C" stroke-width="0.3" opacity="0.6"/>
+
+  <!-- Scissors: blades point up, handles with rings below, pivot at (80,74) -->
+  <line x1="80" y1="74" x2="48" y2="20"  stroke="#C9A84C" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="80" y1="74" x2="112" y2="20" stroke="#C9A84C" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="80" y1="74" x2="50" y2="112" stroke="#C9A84C" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="80" y1="74" x2="110" y2="112" stroke="#C9A84C" stroke-width="2.5" stroke-linecap="round"/>
+
+  <!-- Pivot screw -->
+  <circle cx="80" cy="74" r="4"   fill="#C9A84C"/>
+  <circle cx="80" cy="74" r="1.8" fill="#0a0a0a"/>
+
+  <!-- Finger rings -->
+  <circle cx="41"  cy="120" r="12" fill="none" stroke="#C9A84C" stroke-width="1.8"/>
+  <circle cx="119" cy="120" r="12" fill="none" stroke="#C9A84C" stroke-width="1.8"/>
+
+  <!-- Divider -->
+  <line x1="38" y1="142" x2="122" y2="142" stroke="#C9A84C" stroke-width="0.5" opacity="0.45"/>
+
+  <!-- Brand name inside badge -->
+  <text x="80" y="153" text-anchor="middle"
+    font-family="Georgia, 'Times New Roman', serif"
+    font-size="9" fill="#C9A84C" letter-spacing="2.5">FADES &amp; BLADES</text>
+</svg>
